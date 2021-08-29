@@ -1,4 +1,3 @@
-import os
 import time
 import cv2
 import handtrackingmodule as htm
@@ -20,14 +19,6 @@ cap.set(4, hCam)
 pTime = 0
 cTime = 0
 detector = htm.handDetector(detect_con=0.75)
-FolderPath = "count"
-myFiles = os.listdir(FolderPath)
-print(myFiles)
-overlayList = []
-for imPath in myFiles:
-    image = cv2.imread(f'{FolderPath}/{imPath}')
-    overlayList.append(image)
-
 tipIds = [4, 8, 12, 16, 20]
 
 while True:
